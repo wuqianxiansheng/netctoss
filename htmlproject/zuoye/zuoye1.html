@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+           margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-image: url("../img/bg.jpg");
+        }
+        .main{
+            width: 30%;
+            height: 40%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            padding: 20px;
+            border: 10px;
+            margin: 20px 20px;
+
+
+            background-image: url("../img/tmbg-white.png");
+        }
+
+        h3{
+            text-align: center;
+            font-family: 隶书;
+        }
+        .username{
+            background-image:url("../img/username.png") ;
+
+        }
+        .password{
+            background-image: url("../img/password.png");
+        }
+
+    </style>
+</head>
+<body >
+<div class="main" >
+    <from >
+    <h3>远大高科人事管理系统</h3>
+        <div class="username" align="center">
+        <input type="text"  placeholder="登录账号">
+        </div>
+        <div class="password" align="center">
+            <input type="password"  placeholder="登录密码">
+        </div>
+        <div align="center">
+            <input type="text" placeholder="填写右侧验证码" >
+        </div>
+        <div align="center">
+        <input type="submit" value="登录" >
+        </div>
+    </from>
+</div>
+</body>
+</html>

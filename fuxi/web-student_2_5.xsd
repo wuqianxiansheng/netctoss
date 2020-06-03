@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	模拟servlet2.5规范，如果开发人员需要在xml使用当前Schema约束，必须包括指定命名空间。
+	格式如下：
+	<students xmlns="http://www.example.org/web-student_2_5"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.example.org/web-student_2_5 web-student_2_5.xsd"
+			version="2.5">
+-->
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/web-student_2_5"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/web-student_2_5" 
+	elementFormDefault="qualified">
+	
+	<xsd:element name="students">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="student">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="name" type="string">
+							</xsd:element>
+							<xsd:element name="age" type="int"></xsd:element>
+							<xsd:element name="address" type="string">
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="id"  type="int"  use="required"></xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+
+			</xsd:choice>
+			<xsd:attribute name="version" type="double" use="optional"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

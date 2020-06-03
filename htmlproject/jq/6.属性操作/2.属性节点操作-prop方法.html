@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+
+<body>
+<form action="#">
+    性别:<input type="radio" name="sex" id="sex1" value="man"/>男
+    <input type="radio" name="sex" id="sex2" value="woman"/>女<br>
+    爱好:
+    <input type="checkbox" name="hobby" id="hb1" value="篮球"/>篮球
+    <input type="checkbox" name="hobby" id="hb2" value="足球"/>足球
+    <input type="checkbox" name="hobby" id="hb3" value="旅游"/>旅游<br>
+    故乡：
+    <select name="city" id="city">
+        <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3">广州</option>
+        <option value="4">武汉</option>
+    </select>
+
+    <button id="sel1" type="button">设置选中的性别</button>
+    <button id="sel2" type="button">设置选中的爱好</button>
+    <button id="sel3" type="button">设置选中的故乡</button>
+    <button id="sel4" type="button">获取元素的选中状态</button>
+    <button id="sel5" type="button">设置元素的禁用(禁用按钮2)</button>
+</form>
+<script src="../../web前端zuoye/jquery.min.js"></script>
+<script>
+    /*prop():操作表单元素的checked,disabled,selected属性
+     *  语法：
+     *  设置属性 -- prop(属性名，值)
+     *  获取属性-- prop(属性名)
+     * */
+
+        //设置"女"被选中
+$("#sel1").click(function () {
+    $("input[name=sex]:eq(1)").prop("checked",true)
+})
+
+        //设置"篮球"和"足球"被选中
+$("#sel2").click(function () {
+    $("[name=hobby]:lt(2)").prop("checked",true)
+})
+
+        //让第2项"上海"被选中
+$("#sel3").click(function () {
+    $("option:eq(1)").prop("selected",true)
+})
+    $("#sel4").click(function () {
+        //获取"上海"这一项的选中状态
+        var flag = $("#city>option:eq(1)").prop("selected");
+        console.log("上海这项的选中状态:" + flag);
+    });
+
+</script>
+</body>
+
+</html>

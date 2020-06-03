@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../web前端zuoye/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<img id="star" src="../../img/1.jpg"  alt="图片无法显示" remark="图片备注"><br>
+		<button id="change">改变图片属性</button>
+		<script>
+			/**
+			 *  通过attr()方法操作属性，可以是固有属性，也可以是自定义属性。
+			 * 固有属性：元素上本身就有的属性(被工具提示出来)
+			 * 自定义属性：手动添加到元素上的属性(不被工具提示出来)
+			 *  设置属性：attr(属性名，属性值)
+			 *  获取属性：attr(属性名)
+			 *   
+			 * removeAttr(属性名)：删除指定的属性
+			 *  设置多个属性：attr(
+			 * 	  {
+			 * 	   属性名:值1,
+			 *    属性名2:值2
+			 *  })
+			 * 
+			 */
+			$("#change").click(function () {
+              $("#star").attr('src',"../../img/tly.jpg")
+				console.log($("#star").attr("src"))
+            })
+
+		</script>
+	</body>
+
+</html>

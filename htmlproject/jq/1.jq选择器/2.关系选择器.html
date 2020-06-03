@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>我是div1</div>
+<p>我是p元素</p>
+<div id="parent">
+    <span>第1个span</span>
+    <div id="child">
+        <span>第2个span</span>
+    </div>
+    <span>第3个span</span>
+</div>
+
+<!-- jQuery的关系选择器：就是原来css学习的那几种关系选择器
+       语法：$(CSS选择器)
+
+       比如：$("div,p")获取网页上所有div和p元素
+ -->
+<!-- 引入jQuery库文件 -->
+<script src="../../web前端zuoye/jquery.min.js"></script>
+<script>
+  $("#parent>span").css("color","blue")
+</script>
+</body>
+</html>

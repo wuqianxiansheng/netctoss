@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<form action="http://www.sohu.com">
+			姓名：<input name="username" type="text"> 密码：
+			<input name="password" type="password">
+			<input type="submit" id="submit" value="提交">
+			<input type="button" id="btn" value="普通按钮">
+		</form>
+		<a href="http://www.sohu.com">搜狐</a>
+		<script src="../../web前端zuoye/jquery.min.js"></script>
+		<script>
+			/*
+			 * 点击普通按钮时，默认不会提交表单的，而点击提交按钮(type="submit")，
+			*会默认提交表单,
+			* trigger()方法触发被选元素上指定的事件，同时也会触发事件的默认行为（比如表单提交）。
+			* 方法参数就是要触发的事件
+            *
+		 */
+      $("#btn").click(function () {
+		  $("#submit").trigger("click")
+      })
+		</script>
+	</body>
+
+</html>

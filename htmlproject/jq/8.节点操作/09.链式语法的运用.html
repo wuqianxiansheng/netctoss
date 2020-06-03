@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			.selected{
+			    background-color: yellow; 	
+			    color:red;
+			}
+		</style>
+		<script src="../js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li class="selected">武汉</li>
+			<li>上海</li>
+			<li>重庆</li>
+			<li>广州</li>
+		</ul>
+		
+		<!--  鼠标进入到某个li元素上时，该li标签就添加上selected样式，其它兄弟元素就失去selected样式 -->
+	    <script>
+//             $("ul>li").mouseenter(function () {
+//                 $(this).addClass('selected').siblings().removeClass('selected');
+//             });
+
+             $("ul").on("mouseenter","li",function () {
+                 $(this).addClass('selected').siblings().removeClass('selected');
+             });
+	    </script>
+	</body>
+</html>

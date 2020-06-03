@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(../img/1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+<select name="image" id="select">
+    <option value="0">春意绵绵</option>
+    <option value="1">夏日炎炎</option>
+    <option value="2">秋声瑟瑟</option>
+    <option value="3">冬雪凯凯</option>
+</select>
+<script>
+ let select=document.getElementById("select")
+    select.onchange=function () {
+        //获取图片名称上的数字
+      let num= parseInt(this.value)+1
+        //设置元素的css样式
+        document.body.style.backgroundImage='url(../img/'+num+'.jpg)'
+    }
+</script>
+</body>
+</html>

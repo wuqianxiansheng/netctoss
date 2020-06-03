@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<students xmlns="http://www.example.org/web-student_2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/web-student_2_5 web-student_2_5.xsd" version="2.5">  
+  <student id="1"> 
+    <name>吴骞</name>  
+    <age>20</age>  
+    <address>黄石</address> 
+  </student>  
+  <student id="30"> 
+    <name>yujiang</name>  
+    <age>22</age>  
+    <address>黄石</address> 
+  </student>  
+  <student id="3"> 
+    <name>马翔</name>  
+    <age>20</age>  
+    <address>黄石</address> 
+  </student> 
+</students>

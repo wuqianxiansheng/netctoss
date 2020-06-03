@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(../img/1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+<select name="image" id="select">
+    <option value="0">春意绵绵</option>
+    <option value="1">夏日炎炎</option>
+    <option value="2">秋声瑟瑟</option>
+    <option value="3">冬雪凯凯</option>
+</select>
+<script src="jquery.min.js"></script>
+<script>
+/*   $("#select").change(function () {
+      var i= parseInt($(this).val())+1;
+      $("body").css(" background-image","url(../img/"+i+".jpg)")
+   });*/
+$("#select").change(function () {
+    var i= parseInt( $(this).val()) +1;
+    $("body").css("background-image","url(../img/"+i+".jpg)");
+});
+</script>
+</body>
+</html>

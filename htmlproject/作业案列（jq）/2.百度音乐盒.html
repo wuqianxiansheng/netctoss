@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+<div style="width:600px;height:500px;border:1px solid gray;margin: 0px auto">
+    <h2>百度音乐盒</h2>
+    <input type="button" id="btn1" value="全选"/>
+    <input type="button" id="btn2" value="全否"/>
+    <input type="button" id="btn3" value="反选"/>
+    <input type="button" id="btn4" value="播放"/>
+    <hr>
+    <input type="checkbox" name="song" value="爱你一万年"/>爱你一万年<br>
+    <input type="checkbox" name="song" value="海阔天空"/>海阔天空<br>
+    <input type="checkbox" name="song" value="蓝精灵之歌"/>蓝精灵之歌<br>
+    <input type="checkbox" name="song" value="因为爱情"/>因为爱情<br>
+</div>
+<script src="../web前端zuoye/jquery.min.js"></script>
+<script>
+    $("#btn1").click(function () {
+        $("[name=song]").prop("checked", true);
+    });
+    $("#btn2").click(function () {
+        $("[name=song]").prop("checked", false);
+    });
+    $("#btn3").click(function () {
+        var $song = $("[name=song]");
+        $.each($song, function () {
+            var flag = $(this).prop("checked")
+            $(this).prop("checked", !flag)
+        });
+        $("#btn4").click(function () {
+            var arr = [];
+            var $song = $("[name=song]:checked")
+            $.each($song, function (index, value) {
+                var name = $song.val();
+                arr.push(name);
+            });
+            var songs = arr.join(",")
+            alert(songs)
+        });
+
+    })
+</script>
+</body>
+
+</html>

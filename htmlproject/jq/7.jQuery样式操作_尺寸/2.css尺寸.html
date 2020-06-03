@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery.min.js"></script>
+
+</head>
+<body>
+<div style="width:100px;height: 200px;padding:5px 10px;background-color: yellow;" id="txt">我是div</div>
+
+<input type="button" id="btn" value="获取尺寸"/>
+<input type="button" id="btn2" value="设置尺寸"/>
+<script>
+    /**
+     *  1)width():获取或设置元素的宽(不包含内边距padding,外边距margin,边框)
+     * 2)height():设置或获取元素的高(不包含内边距padding,外边距margin,边框)
+     *  以上方法获取的宽高没有单位，这2个方法和css("width"),css("height")的区别
+     *   css()获取的宽和高是带单位的
+     */
+    $("#btn").click(function () {
+        //获取div的宽
+        var width = $("div").width();
+        //获取div的高
+        var height = $("div").height();
+        console.log("宽：" + width + ",高：" + height);
+        var cssWidth = $("div").css("width");
+        var cssHeight = $("div").css("height");
+        console.log("css方法获取的宽：" + cssWidth + "，高：" + cssHeight);
+    })
+    $("#btn2").click(function () {
+        //设置宽，高
+        $("div").width(200);
+        //$("div").height(400);
+        $("div").css("height","400px");
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+
+ <ul id="list">
+    <li>我是一个li标签1</li>
+    <li>我是一个li标签2</li>
+    <li>我是一个li标签3</li>
+    <li>我是一个li标签4</li>
+    <li>我是一个li标签5</li>
+    <li>我是一个li标签6</li>
+    <li>我是一个li标签7</li>
+    <li>我是一个li标签8</li>
+    <li>我是一个li标签9</li>
+    <li>我是一个li标签10</li>
+</ul>
+<script>
+    /**
+     * jQuery的each循环
+     *   语法：
+     *      $.each(对象, function(index, value){
+			 *      });
+     *    其中的对象包含3种，分别是数组、JSON对象和jQuery对象
+     *
+     *   第1种：遍历数组时，回调函数上的参数index是索引，value是元素值
+     *   第2种：遍历json对象时，index是对象的属性名，value是属性值
+     *   第3种：遍历jQuery对象时，index是DOM对象在整个元素数组中的索引,value是当前jQuery对象
+     *   转换后的DOM对象
+     */
+
+    var arr = ["111", "222", "333"];
+    $.each(arr, function (index, value) {
+        console.log(index + "..." + value);
+    });
+    console.log(".......................");
+    var stu = {"id": 10, "name": "小明", "age": 24};
+    $.each(stu, function (index, value) {
+        console.log("属性名：" + index + ",值：" + value);
+    });
+    console.log(".......................");
+     //获取jQuery对象，即多个li元素组成的元素数组
+    var $li=$("ul>li");
+    $.each($li,function (index,value) {
+       // console.log(index);
+      //  console.log(value);//jQuery对象输出的格式：m.fn.init(n),DOM对象是直接输出整个元素
+      //  console.log(value==this);//true
+         console.log(value.innerHTML+"..."+$(value).html());
+    });
+
+</script>
+</body>
+
+</html>

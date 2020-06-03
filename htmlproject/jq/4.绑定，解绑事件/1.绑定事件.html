@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<ul>
+			<li>我是一个li标签1</li>
+			<li>我是一个li标签2</li>
+			<li>我是一个li标签3</li>
+			<li>我是一个li标签4</li>
+			<li>我是一个li标签5</li>
+			<li>我是一个li标签6</li>
+			<li>我是一个li标签7</li>
+			<li>我是一个li标签8</li>
+			<li>我是一个li标签9</li>
+		</ul>
+		<script  src="../../web前端zuoye/jquery.min.js"></script>
+		<script>
+			/**
+			 *  以下做法，浏览器的js引擎在解释该代码时，会针对每个li元素添加单击事件
+			 * ，相当于在内存中遍历出每个li元素，依次给它们添加单击事件
+			 */
+//			$("ul>li").click(function(){
+//				  console.log("被点击了，"+$(this).html());
+//			})
+			/**
+			 *  当需要批量的给多个相同元素添加事件时，建议使用绑定事件的语法
+			 * $(selector).on(types, childSelector, data, handlerFunction)
+			 * 其中，selector是选择器，是用来选择父元素的
+			 * types:要添加的事件类型，可以是一个或多个事件，多个事件之间用空格隔开
+			 * childSelector:子元素选择器，用来将一个或多个事件添加到哪些子元素上，由子元素来响应事件
+			 * data:传递给响应函数的额外数据,数据格式为json格式，即key:value，获取数据时用event.data.key
+			 * handlerFunction:事件发生时要调用的响应函数
+			 * 
+			 *  执行机制：是将事件由父元素向下传播给子元素，与事件冒泡相反，浏览器的js引擎只选择了父元素
+			 * 
+			 */
+$("ul").on("click","li",{'msg':'hello'},function (event) {
+	console.log(this.innerHTML+"......"+"参数数据"+event.data.msg)
+})
+
+		</script>
+	</body>
+
+</html>

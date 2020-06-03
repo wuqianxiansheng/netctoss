@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.main {
+				width: 720px;
+				margin: 50px auto;
+			}	
+			.tab {
+				height: 38px;
+				width: 320px;
+				border: 1px solid #ccc;
+				margin-bottom: -1px;
+			}
+			
+			.tab>.active {
+				border-top-color: red;
+			}
+			
+			.tab>li {
+				border-top: 4px solid #fff;
+				float: left;
+				height: 32px;
+				line-height: 32px;
+			}
+			
+			.tab>li>a {
+				display: inline-block;
+				width: 80px;
+				height: 32px;
+				text-align: center;
+				color: #000;
+			}
+			
+			.products {
+				width: 720px;
+				height: 505px;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.products>img {
+				display: none;
+			}
+			
+			.products>.show {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<ul class="tab" id="tab">
+				<!--设置class属性值为active，为了设置导航栏顶部的红色线条-->
+				<li class="active">
+					<a href="javascript:;">母婴用品</a>
+				</li>
+				<li>
+					<a href="javascript:;">厨房用品</a>
+				</li>
+				<li>
+					<a href="javascript:;">美容护肤</a>
+				</li>
+				<li>
+					<a href="javascript:;">生活电器</a>
+				</li>
+			</ul>
+			<div class="products" id="products">
+				<!--设置class属性值为show，为了显示出对应的商品图片-->
+				<img class="show" src="../img/tab/myyp.png" alt="母婴用品">
+				<img src="../img/tab/cfyp.png" alt="厨房用品">
+				<img src="../img/tab/mrhf.png" alt="美容护肤">
+				<img src="../img/tab/shdq.png" alt="生活电器">
+			</div>
+		</div>
+		<script src="../web前端zuoye/jquery.min.js"></script>
+		<script>
+			/**
+			 * 需求：鼠标进入到某一个导航栏时，它的顶部就显示为红色边框，其它导航栏失去红色边框,
+			 * 同时下方的图片也切换变成对应的图片
+			 * 
+			 */
+$("#tab").on("mouseenter","li",function () {
+	 $(this).addClass("active").siblings().removeClass("active");
+    //获取元素在兄弟元素中的索引
+    var index=    $(this).index()
+	$("#products>img:eq("+index+")").addClass("show").siblings().removeClass("show")
+})
+
+		</script>
+	</body>
+
+</html>

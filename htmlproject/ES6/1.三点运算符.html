@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 三点运算符：...，相当于java中可变参数符号,使用：...参数名
+     *
+     */
+let fn=(...vaule)=>{
+        console.log(value);
+        value.forEach((item,index)=>{
+            console.log("索引："+index+",元素："+item);
+    })
+    }
+    fn(1,2,3)
+
+</script>
+</body>
+</html>

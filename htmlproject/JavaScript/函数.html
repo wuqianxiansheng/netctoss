@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建函数
+    /*
+    function 函数名（参数1，参数2.....）{方法体}
+    未给函数命名，则称为匿名函数
+
+     */
+/*function sum(a,b){
+    return a+b;
+}
+var sum=sum(1,2)
+    console.log(sum)
+/!*
+函数表达式
+ *!/
+var fun=function (a,b) {
+    return a+b;
+    
+}
+console.log(fun(2,3))*/
+//创建函数计算任意变量的和
+    var add=function () {
+        var total=0;
+        for(var i=0;i<arguments.length;i++){
+            total+=arguments[i];
+        }
+        return total;
+    }
+  var sum=  add(10,2,3,4)
+    console.log(sum)
+</script>
+</body>
+</html>

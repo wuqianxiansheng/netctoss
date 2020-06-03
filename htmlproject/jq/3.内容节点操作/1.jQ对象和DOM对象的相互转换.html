@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>我是一个p标签1</p>
+<p>我是一个p标签2</p>
+<p>我是一个p标签3</p>
+<div id="txt">我是一个div</div>
+<!--引入jQuery库-->
+<script src="../../web前端zuoye/jquery.min.js"></script>
+<script>
+    /*jQuery对象和DOM对象的相互转换
+     *  1.DOM对象转换为jQuery对象-->用一个$()把DOM对象包装起来，就变成了jQuery对象
+     *  2.jQuery对象转换为DOM对象,有2种转换方式
+     *   第1种：用jQuery对象[索引]，获取对应的DOM对象
+     *   第2种：用jQuery对象.get(索引)，获取对应的DOM对象
+     * */
+    let id = document.getElementById("txt");
+    let    $div = $(id);
+    console.log($div)
+    let p=$("p")[1]
+    console.log(p)
+    let p1=$("p").get(1)
+    console.log(p1)
+</script>
+</body>
+</html>

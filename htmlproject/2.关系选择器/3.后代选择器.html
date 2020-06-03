@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+#parent span{
+    color: red;
+}
+    </style>
+</head>
+<body>
+ <!-- 3.后代选择器：把元素的所有后代元素选出来，后代包含子元素+孙子元素
+     语法：父元素E  后代F
+   -->
+ <div id="parent">
+     <h1>我是一个h1标签</h1>
+     <span>我是一个span标签</span>
+     <div>
+         <p>我是一个p标签</p>
+         <span>我是一个span标签</span>
+         <strong>我是一个强调标签</strong>
+     </div>
+     <p>我是一个p标签</p>
+ </div>
+</body>
+</html>

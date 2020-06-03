@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		用户名：<input type="text" id="uname" value="111" />
+		<input type="button"  id="btn" value="设置文本框的value" />
+		<!--引入jQuery库-->
+		<script src="../../web前端zuoye/jquery.min.js"></script>
+		<script>
+		/*	val() - 设置或获取所选元素的value，相当于DOM对象的value属性
+		 *  设置：val(参数)，参数就是要加到元素中的值
+		 *  获取:val()
+		 * */
+    $("#btn").click(function () {
+		$("#uname").val(222)
+		console.log($("#uname").val())
+    })
+		</script>
+	</body>
+</html>

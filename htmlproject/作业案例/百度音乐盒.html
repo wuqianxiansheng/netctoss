@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+<div style="width:600px;height:500px;border:1px solid gray;margin: 0px auto">
+    <h2>百度音乐盒</h2>
+    <input type="button" id="btn1" value="全选"/>
+    <input type="button" id="btn2" value="全否"/>
+    <input type="button" id="btn3" value="反选"/>
+    <input type="button" id="btn4" value="播放"/>
+    <hr>
+    <input type="checkbox" name="song" value="爱你一万年"/>爱你一万年<br>
+    <input type="checkbox" name="song" value="海阔天空"/>海阔天空<br>
+    <input type="checkbox" name="song" value="蓝精灵之歌"/>蓝精灵之歌<br>
+    <input type="checkbox" name="song" value="因为爱情"/>因为爱情<br>
+</div>
+
+<script>
+let btn1=document.getElementById("btn1")
+let btn2=document.getElementById("btn2")
+let btn3=document.getElementById("btn3")
+let btn4=document.getElementById("btn4")
+    btn1.onclick=function () {
+        let songs=document.getElementsByName("song")
+        for(var i in songs){
+             songs[i].checked=true;
+        }
+    }
+btn2.onclick=function () {
+    let songs=document.getElementsByName("song")
+    for(var i in songs){
+        songs[i].checked=false;
+    }
+}
+btn3.onclick=function () {
+    let songs=document.getElementsByName("song")
+    for(var i in songs){
+        if (songs[i].checked){
+            songs[i].checked= false;
+        }else {
+            songs[i].checked=true;
+        }
+
+    }
+}
+
+btn4.onclick=function () {
+    let arrs=[]
+    let songs=document.getElementsByName("song")
+for (var i in songs){
+        if(songs[i].checked){
+            arrs.push(songs[i].value)
+        }
+}
+    //把数组中的元素连接成字符串
+    let s=arrs.join('-')
+//弹出选中的歌曲
+    alert(s)
+}
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        tr > td {
+            /* 单元格文本居中对齐 */
+            text-align: center;
+        }
+
+        .selStyle {
+            /* 蓝色背景 */
+            background-color: blue;
+            /* 白色文字 */
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+
+<table border="1" cellpadding="8" cellspacing="0" width="50%">
+    <caption>用户列表</caption>
+    <tr style="background-color: greenyellow;">
+        <th><input type="checkbox" name="all" id="all"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>电子邮箱</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="uids" value="101"/></td>
+        <td>101</td>
+        <td>刘小风</td>
+        <td>男</td>
+        <td>23</td>
+        <td>liuxiaof@126.com</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="uids" value="102"/></td>
+        <td>102</td>
+        <td>聂海华</td>
+        <td>男</td>
+        <td>24</td>
+        <td>liehaih@126.com</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="uids" value="103"/></td>
+        <td>103</td>
+        <td>胡一笑</td>
+        <td>女</td>
+        <td>25</td>
+        <td>huyixiao@163.com</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="uids" value="104"/></td>
+        <td>104</td>
+        <td>刘梦龙</td>
+        <td>男</td>
+        <td>27</td>
+        <td>liumengl@163.com</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="uids" value="105"/></td>
+        <td>105</td>
+        <td>朱韵华</td>
+        <td>女</td>
+        <td>23</td>
+        <td>zhuyunhua@163.com</td>
+    </tr>
+</table>
+<input type="button" id="btnDelete" value="删除选中的行"/>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $("table").on("mouseenter", "tr:gt(0)", function () {
+
+        $(this).addClass("selStyle").siblings().removeClass("selStyle")
+    })
+    $("#all").click(function () {
+        $("#all").prop("checked")
+        $("[name=uids]").prop("checked", $("#all").prop("checked"))
+
+    })
+
+    $("#btnDelete").click(function () {
+        var i = $("input[name=uids]:checked").size();
+        if(i>0){
+            var f=confirm("确定删除选中的行吗？");
+            if(f){
+                $.each($("input[name=uids]:checked"),function (index, value) {
+                    $(this).parent().parent().remove()
+                })
+            }else {
+                alert("至少要选中一行数据");
+            }
+
+        }
+
+    })
+
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+<div style="width: 300px;height: 300px;background-color: yellow;">我是第1个div</div>
+<div style="width: 300px;height: 300px;background-color: red;" id="second">我是第2个div</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    /**
+     *  on():绑定事件，将父元素的事件由上向下传播给子元素
+     * off()方法移除用on()绑定的事件处理程序
+     * 语法：$(selector).off(types,childSelector)
+     * selector:父元素选择器，是用来选择父元素的
+     *   types    可选。规定要从被选元素移除的一个或多个事件，多个事件之间用空格隔开
+     *  childSelector    可选。指定对某个子元素进行解绑
+     *  注意：对于 body元素的选择，可以写$(document.body)或者$("body")
+     * 特殊： 如果off()不传任何参数，则表示移除所有子元素的所有事件
+     */
+    $("body").on("click mouseenter", "#second", function () {
+        console.log(this.innerHTML + "..click");
+        //解除绑定
+        // $("body").off("mouseenter","#second");
+        $("body").off();
+    });
+</script>
+</body>
+
+</html>

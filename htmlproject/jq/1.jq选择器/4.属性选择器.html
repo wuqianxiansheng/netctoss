@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p title="aa">我是段落</p>
+<p title="cc" class="mm">我是段落2</p>
+<h2 title="bb">我是h2元素</h2>
+<h2 title="cc" class="mm">我是第2个h2元素</h2>
+<!--引入jQuery库-->
+<script src="../../web前端zuoye/jquery.min.js"></script>
+<script>
+    /*属性选择器:根据元素的属性来选择元素
+     语法1：$([attr]):选择网页上具有attr属性的所有元素，不用管attr属性的值
+     语法2：$(E[attr]):选择具有attr属性的所有E元素,不用管attr属性的值
+     语法3：$(E[attr=value]):选择具有attr属性且属性值是value的所有E元素
+      语法4：$([attr=value]):选择具有attr属性且属性值是value的所有元素
+      语法5:$([attr1][attr2]):选择具有属性attr1且要满足attr2条件的所有元素
+      注意：如果属性值value没有/及：等特殊字符，那么value可以不用双引号包裹
+     **/
+    /*   $("[title]").css("color","red")*/
+    /*$("[title=cc]").css("color","red")*/
+    $("p[title]").css("color", "red")
+</script>
+</body>
+</html>

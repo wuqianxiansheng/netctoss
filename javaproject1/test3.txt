@@ -1,0 +1,13 @@
+﻿public class BufferedByteDemo {
+	public static void main(String[] args) throws IOException {
+		// 指定目的地
+		FileOutputStream fos = new FileOutputStream("test.txt");
+		BufferedOutputStream bos = new BufferedOutputStream(fos);
+		// 存数据
+		bos.write("whsxt".getBytes());
+		// 刷新数据
+		bos.flush();
+		// 关闭流
+		bos.close();
+	}
+}

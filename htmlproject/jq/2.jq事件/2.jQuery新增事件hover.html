@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        #box, #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #box2 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<div id="box2"></div>
+<!--引入jQuery库-->
+<script src="../../web前端zuoye/jquery.min.js"></script>
+<script>
+    /*hover事件:模仿悬停事件（鼠标移动到一个对象上面及移出这个对象）的方法。
+    该事件有两个匿名函数:
+     函数1:在鼠标进入元素时触发执行  函数2:在鼠标离开元素时触发执行
+      hover事件本质是mouseenter和mouseleave事件的组合
+      注意：如果在鼠标进入和离开元素时，使用相同的事件处理程序，则只需写一个函数--不管是进入还是离开事件
+      ，都用同一个函数来处理
+    * */
+/*    $("#box2").hover(function () {
+        console.log("鼠标进入..");
+    }, function () {
+        console.log("鼠标离开..");
+    });
+    $("#box").hover(function () {
+          console.log("111111");
+    });*/
+$("#box2").hover(function () {
+    console.log("鼠标进入..");
+},function () {
+    console.log("鼠标离开..");
+    })
+</script>
+</body>
+</html>

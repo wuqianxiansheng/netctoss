@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<form action="#"  method="get" >
+<h2 align="center">用户注册表</h2>
+ <table  align="center" border="1" cellspacing="0" cellpadding="10" >
+     <tr>
+         <td>用户名：</td>
+         <td><input type="text" name="username"></td>
+     </tr>
+     <tr>
+         <td>密码：</td>
+            <td><input type="password" name="userpassword"></td>
+     </tr>
+     <tr>
+         <td>确认密码：</td>
+         <td><input type="password" name="userpassword"></td>
+     </tr>
+     <tr>
+         <td>电子邮箱</td>
+         <td><input type="text"></td>
+     </tr>
+     <tr>
+         <td>手机号码</td>
+         <td><input type="text"></td>
+     </tr>
+     <tr>
+         <td>性别</td>
+         <td>
+             <input type="radio" name="sex"  value="man" >男
+             <input type="radio" name="sex"  value="women" >女
+
+         </td>
+     </tr>
+     <tr>
+         <td>是否有房</td>
+         <td>
+             <input type="radio" name="house" value="yes">有
+             <input type="radio" name="house" value="no">没有
+
+         </td>
+     </tr>
+     <tr>
+         <td>爱好</td>
+         <td>
+             <input type="checkbox" name="hobby" value="fbb">范冰冰
+             <input type="checkbox" name="hobby" value="lyf">刘亦菲
+             <input type="checkbox" name="hobby" value="tly">佟丽娅
+             <input type="checkbox" name="hobby" value="yy">杨颖
+             <input type="checkbox" name="hobby" value="ll">柳岩
+
+         </td>
+
+     </tr>
+     <tr>
+         <td>
+            户籍
+         </td>
+         <td>
+             <select name="city">
+                 <option value="bj">北京</option>
+                 <option value="sh">上海</option>
+                 <option value="wh">武汉</option>
+             </select>
+         </td>
+     </tr>
+     <tr>
+         <td>课程</td>
+         <td>
+             <select name="kecheng" size="4" multiple>
+                 <option value="1">javaEE</option>
+                 <option value="2">web前端</option>
+                 <option value="3">数据库</option>
+                 <option value="4">C++</option>
+             </select>
+         </td>
+     </tr>
+     <tr>
+         <td>头像</td>
+         <td>
+             <input type="file" name="file">
+         </td>
+     </tr>
+     <tr>
+         <td>个人介绍</td>
+         <td><textarea></textarea></td>
+     </tr>
+     <tr>
+         <td>验证码</td>
+         <td><input type="text">8888</td>
+     </tr>
+     <tr>
+         <td colspan="2" align="center">
+           <input type="checkbox" name="yes/no" value="yes">
+             是否阅读并同意协议
+         </td>
+     </tr>
+     <tr>
+         <td colspan="2" align="center">
+             <input type="submit" value="提交">
+             <input type="reset" value="重置">
+         </td>
+     </tr>
+
+
+ </table>
+</form>
+</body>
+</html>

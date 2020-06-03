@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建对象方式3-用构造函数创建,语法：function  函数名(){},函数首字母大写(相当于类名)
+    /**
+     *  当只需要创建一个对象时，用方式1和方式2都可以；
+     *  当需要批量创建对象时，用方式3创建
+     */
+    function Student(name,age) {
+        this.name=name;
+        this.age=age;
+        this.eat=function(name){
+            console.log(name+"在睡觉");
+
+        }
+    }
+    var stu=new Student("wu",20)
+    stu.eat();
+    console.log(this.age)
+</script>
+</body>
+</html>

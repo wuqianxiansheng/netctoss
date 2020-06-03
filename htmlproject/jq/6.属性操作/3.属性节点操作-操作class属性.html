@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.boxstyle {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			
+			.boxstyle2 {
+				font-size: 26px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">我是div</div>
+		<button id="sel1">添加class</button>
+		<button id="sel2">移除class</button>
+		<button id="sel3">切换class</button>
+		<!-- 引入jQuery库文件 -->
+		<script src="../../web前端zuoye/jquery.min.js"></script>
+		<script>
+		/*	 操作class属性的方法:
+			*   1. addClass():给元素添加1个或多个类(class),相当于在元素上写class="xxx",参数是类名
+			 *  如果添加多个类，多个类名之间用空格隔开,当多个类里面有相同样式名，后者的样式值会覆盖前者
+			 *  2. removeClass()：从元素上移除一个或多个类，参数是类名(多个类名之间用空格隔开),
+			 *   如果没有参数表示移除所有的类
+			 *  3.hasClass():可以用来判断元素中是否含有某个class，有返回true,否则返回false
+			 *  4.toggleClass():切换被选元素的类，，如果元素中有指定的类就移除，没有就添加该类,
+			 *参数也是类名
+			 *  相当于先判断是否有指定的类，没有就添加，有就移除
+			 *   
+			 *  if(元素.hasClass(类名)){
+			 * 	    元素.removeClass(类名)
+			 * }else{
+			 * 	 元素.addClass(类名) 
+			 * }
+			 *
+			 * */
+$("#sel1").click(function () {
+	$("#box").addClass("boxstyle boxstyle2")
+
+})
+        $("#sel2").click(function () {
+            $("#box").removeClass("boxstyle")
+
+        })
+
+
+		</script>
+
+	</body>
+
+</html>

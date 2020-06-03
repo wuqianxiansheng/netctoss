@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .move {
+            display: inline-block;
+            width: 30px;
+        }
+
+        select {
+            width: 50px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<select id="left-city" multiple>
+    <option value="0">重庆</option>
+    <option value="1">武汉</option>
+    <option value="2">上海</option>
+    <option value="3">成都</option>
+    <option value="4">北京</option>
+</select>
+
+<div class="move">
+    <button id="left-btn">&gt;&gt;</button>
+    <button id="right-btn">&lt;&lt;</button>
+</div>
+
+<select id="right-city" multiple>
+    <!--<option value="5">深圳</option>-->
+    <script src="../web前端zuoye/jquery.min.js"></script>
+</select>
+
+<script>
+    $("#left-btn").click(function () {
+        var $o = $("#left-city>option:selected")
+        $("#right-city").append($o);
+
+    })
+    $("#right-btn").click(function () {
+        var $o = $("#right-city>option:selected")
+        $("#left-city").append($o);
+
+    })
+</script>
+</body>
+</html>

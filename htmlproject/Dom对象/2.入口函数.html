@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 入口函数window.onload：在网页的DOM树结构加载完以及所有文件都加载完毕后执行的函数
+        什么时候需要用入口函数？
+        当获取元素的代码在元素的前面时，则获取元素的代码一定要写在入口函数中
+    -->
+<script>
+   window.onload=function () {
+       let span=document.getElementById("info")
+       console.log(span)
+   }
+
+
+
+</script>
+<span id="info">我是span里的内容</span>
+</body>
+</html>

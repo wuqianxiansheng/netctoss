@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--事件三要素：
+  1.事件源：发生事件的对象，比如点击了按钮，按钮就是事件源
+  2.事件：具体发生的事情，比如单击事件
+  3.事件驱动程序：当事件发生的时候，要执行的响应函数或代码
+  -->
+<div id="box" style="background-color: yellow;">我是div</div>
+<hr>
+<div id="box2" style="background-color: yellow;">我是div2</div>
+<script>
+//首先得到事件源
+  var div=  document.getElementById("box")
+    div.onclick=function () {
+        console.log("我是div")
+    }
+</script>
+
+</body>
+</html>

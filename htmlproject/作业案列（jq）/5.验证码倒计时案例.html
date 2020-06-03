@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            width: 115px;
+            height: 23px;
+            font-size: 12px;
+        }
+
+        input {
+            height: 22px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<input type="text">
+<button id="btn">发送验证码</button>
+<script src="../web前端zuoye/jquery.min.js"></script>
+<script>
+    var timeout;
+    var i;
+    $("#btn").click(function () {
+         i= 5;
+        $("#btn").html("5s后重新发送");
+        $(this).prop("disabled", true);
+        timeout = setInterval(Myfun, 1000)
+        return i=5;
+    })
+
+    function Myfun() {
+        i--;
+        if (i == 0) {
+            $("#btn").html("发送验证码");
+            $("#btn").prop("disabled", false);
+            clearInterval(timeout);
+        } else {
+            $("#btn").html(i + "s后重新发送")
+        }
+
+    }
+
+</script>
+</body>
+</html>

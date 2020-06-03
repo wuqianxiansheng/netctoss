@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            width: 115px;
+            height: 23px;
+            font-size: 12px;
+        }
+
+        input {
+            height: 22px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<input type="text">
+<button id="btn">发送验证码</button>
+<script>
+    let timeout;
+    let btn = document.getElementById("btn");
+    let i = 5;
+    btn.onclick = function () {
+        btn.disabled = true;
+        btn.innerHTML = "5s后重新发送"
+        timeout = setInterval(changeText, 1000)
+         return i=5;
+    }
+
+    function changeText() {
+              i--;
+        if (i == 0) {
+            btn.innerHTML = "获取验证码"
+            btn.disabled = false;
+            clearInterval(timeout)
+        }else {
+            btn.innerHTML=i+"s后重新发送"
+        }
+    }
+
+</script>
+
+</body>
+</html>

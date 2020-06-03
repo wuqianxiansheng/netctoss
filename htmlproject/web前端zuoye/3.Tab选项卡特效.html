@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.main {
+				width: 400px;
+				margin: 1px auto;
+			}
+			
+			.tab {
+				height: 38px;
+				width: 320px;
+				border: 1px solid #ccc;
+				margin-bottom: -1px;
+			}
+			
+			.tab>.active {
+				border-top-color: red;
+		        background-color:darkkhaki;
+			}
+			
+			.tab>li {
+				border-top: 4px solid #fff;
+				float: left;
+				height: 32px;
+				line-height: 32px;
+			}
+			
+			.tab>li>a {
+				display: inline-block;
+				width: 80px;
+				height: 32px;
+				text-align: center;
+				color: #000;
+			}
+			
+			.card {
+				width: 322px;
+				height: 100px;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.card>div {
+				display: none;
+			}
+			
+			.card>.show {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<ul class="tab" id="tab">
+				<!--设置class属性值为active，为了设置导航栏顶部的红色线条-->
+				<li class="active">
+					<a href="javascript:;">春运</a>
+				</li>
+				<li>
+					<a href="javascript:;">专栏</a>
+				</li>
+				<li>
+					<a href="javascript:;">热点</a>
+				</li>
+				<li>
+					<a href="javascript:;">看湖北</a>
+				</li>
+			</ul>
+			<div class="card">
+			    <!-- 4个div和上面的4个栏目相对应 -->
+				<div class="show">
+					<p style="color:blue;font-size: 14px;">
+						<span>香港高铁春运首秀一票难求</span><br>
+						<span>加长版”复兴号“，助力春运</span><br>
+			  	 	<span>春运意味着拥挤，也意味着幸福</span><br>
+			  	 </p>
+			  </div>
+			  <div>
+			  	 <ul>
+			  	 	<li>吴昕"宅懒养生"人设是双刃剑？</li>
+			  	 	<li>联赛欧冠利物浦只能2选1</li>
+			  	 	<li>三安光电：一个虚弱的胖子</li>
+			  	 	<li>匿名社交兴亡史</li>
+			  	 </ul>
+			  </div>
+			    <div>
+			  	  <p style="color:black;font-size: 14px;">
+			  	 	<span>吴秀波资本版图曝光</span><br>
+						<span>故宫数字沉浸体验展将开放</span><br>
+			  	 	<span>哈登37分火箭惨败76人</span><br>
+			  	 		<span>54岁巩俐尽显女王范</span>
+			  	 </p>
+			  </div>
+			   <div>
+			  	  <p style="color:deepskyblue;font-size: 14px;">
+			  	 	<span>武汉通年内可刷遍全国公交地铁</span><br>
+						<span> 武汉将建4条市域铁路</span><br>
+			  	 	<span>湖北省委副秘书长杨邦国接受纪律审查和监察调查</span><br>
+			  	 	<span>湖北省十大事故多发路段公布</span>
+			  	 </p>
+			  </div>
+			</div>
+		</div>
+	</body>
+	<script src="jquery.min.js"></script>
+<script>
+	$("#tab").on("mouseenter","li",function () {
+		$(this).addClass("active").siblings().removeClass("active");
+       var index= $(this).index();
+       $(".card>div:eq("+index+")").addClass("show").siblings().removeClass("show")
+    });
+</script>
+</html>

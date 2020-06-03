@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="content">我是div</div>
+		<input type="button"  id="btn" value="改变div的内容" />
+		<!--引入jQuery库-->
+		<script src="../../web前端zuoye/jquery.min.js"></script>
+		<script>
+		/*	text() - 设置或获取所选元素的内容（不包括HTML标记,不解析css样式)，相当于DOM对象的innerText
+		 *  设置：text(参数)，参数就是要加到元素中的内容
+		 *  获取:text()
+		 * */
+        $("#btn").click(function(){
+            $("#content").text("<h2 style='color:red'>我是h2标题字</h2>");
+        });
+		</script>
+	</body>
+</html>

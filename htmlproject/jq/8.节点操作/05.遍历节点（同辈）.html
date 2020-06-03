@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.min.js"></script>
+   
+</head>
+<body>
+    <ul>
+        <li>我是一个li标签1</li>
+        <li class="txt">我是一个li标签2</li>
+        <li>我是一个li标签3</li>
+        <li>我是一个li标签4</li>
+        <li>我是一个li标签5</li>
+        <li id="box" class="box">我是一个li标签6</li>
+        <li class="txt">我是一个li标签7</li>
+        <li>我是一个li标签8</li>
+        <li class="txt">我是一个li标签9</li>
+        <li>我是一个li标签10</li>
+    </ul>
+   <script>
+        /**
+         * 节点遍历操作：
+         *    1.节点遍历-父元素
+         *        -- 找直接父元素
+         *          语法：子元素.parent()
+         *        -- 找祖先元素
+         *          语法: 子元素.parents() 找到全部的父辈元素
+         *          语法: 子元素.parents("CSS选择器") 找到指定的父辈元素
+         *    2.节点操作-后代
+         *        -- 找直接子元素(可以有多个)
+         *           语法：父元素.children() 找到全部的亲儿子
+         *           语法：父元素.children("CSS选择器") 找到指定的亲儿子
+         *        -- 找后代元素
+         *           语法：父元素.find("*") 找到全部的后代元素
+         *           语法：父元素.find("CSS选择器") 找到指定的后代元素
+         *    3.节点操作-同辈
+         *        -- 找参照元素【后面】的兄弟元素
+         *           语法：参照元素.next() 找到参照元素后面的那一个兄弟，只返回1个元素
+         *           语法：参照元素.nextAll() 找到参照元素后面的所有兄弟，返回多个元素
+         *           语法：参照元素.nextAll("CSS选择器") 找到参照元素后面的指定的兄弟
+         *         -- 找参照元素【前面】的兄弟元素
+         *           语法：参照元素.prev() 找到参照元素前面的那一个兄弟
+         *           语法：参照元素.prevAll() 找到参照元素前面的所有兄弟
+         *           语法：参照元素.prevAll("CSS选择器") 找到参照元素前面的指定的兄弟
+         *         -- 找参照元素【所有】的兄弟元素
+         *           语法：参照元素.siblings() 找到参照元素所有的兄弟(前面的兄弟+后面的兄弟)
+         *           语法：参照元素.siblings("CSS选择器") 找到参照元素符合条件的兄弟
+         */
+  // $("#box").siblings().css("background-color","yellow");
+ //$("#box").siblings(".txt").css("background-color","yellow");
+  
+  $("#box").prevAll(".txt").css("background-color","yellow");
+
+    </script>
+</body>
+</html>

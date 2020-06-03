@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #parent {
+            width: 400px;
+            height: 400px;
+            border:1px solid yellow;
+        }
+        #parent_2 {
+            width: 200px;
+            height: 200px;
+            border:1px solid green;
+        }
+        #child {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="parent">
+        <div id="parent_2">
+          <div id="child">我是child</div>
+        </div>
+    </div>
+    <script>
+        /**
+         * 节点遍历操作：
+         *    1.节点遍历-父元素
+         *        -- 找直接父元素
+         *          语法：子元素.parent()
+         *        -- 找祖先元素
+         *          语法: 子元素.parents() 找到全部的父辈元素
+         *          语法: 子元素.parents("CSS选择器"): 找到指定的父辈元素
+         */
+       // $("#child").parent().css("background-color","yellow");
+        $("#child").parents("#parent").css("background-color","yellow");
+    </script>
+</body>
+</html>

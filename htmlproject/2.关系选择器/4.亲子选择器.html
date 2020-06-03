@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #parent > div > p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!-- 4.亲子选择器：把元素的所有直接子元素选出来，不包含孙子元素
+    语法：父元素E>F
+  -->
+<div id="parent">
+    <h1>我是一个h1标签</h1>
+    <span>我是一个span标签</span>
+    <div>
+        <p>我是一个p标签</p>
+        <span>我是一个span标签</span>
+        <strong>我是一个强调标签</strong>
+    </div>
+    <p>我是一个p标签</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            position: fixed;
+            /* 鼠标指针的形状,pointer表示手形 */
+            cursor: pointer;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+<img src="../img/miaomifeng.gif" alt="小蜜蜂" id="mifeng">
+<script>
+    let mifeng=document.getElementById("mifeng")
+    //添加鼠标移动事件
+    document.body.onmousemove=function (event) {
+        mifeng.style.left=(event.clientX-mifeng.width/2)+"px";
+        mifeng.style.top=(event.clientY-mifeng.height/2)+"px";
+
+    }
+</script>
+</body>
+</html>

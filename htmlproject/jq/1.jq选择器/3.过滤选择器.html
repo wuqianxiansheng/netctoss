@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--/*	过滤选择器:
+*    :first：选择第一个元素
+*    :last:选择最后一个元素
+*   :not(css选择器)：选择除了给定选择器匹配元素以外的所有元素
+*   :even:选择所有索引为偶然的元素，索引从0开始
+*    :odd:选择所有索引为奇然的元素，索引从0开始
+*   :eq(index):选择索引为index的元素，索引从0开始
+*   :gt(index):选择索引大于index的元素，索引从0开始
+*   :lt(index):选择索引小于index的元素，索引从0开始
+* 	 * */-->
+<ul>
+    <li>我是第1个li</li>
+    <li>我是第2个li</li>
+    <li>我是第3个li</li>
+    <li>我是第4个li</li>
+    <li id="five">我是第5个li</li>
+    <li>我是第6个li</li>
+    <li>我是第7个li</li>
+    <script src="../../web前端zuoye/jquery.min.js"></script>
+    <script>
+       /* $("li:first").css("color","red")
+        $("li:last").css("color","blue")*/
+        /*$("li:not(#five)").css("color","blue")*/
+      //  $("li:even").css("color","blue")
+      /* $("li:odd").css("color","blue")*/
+       $("li:eq(4)").css("color","blue")
+
+    </script>
+</ul>
+</body>
+</html>

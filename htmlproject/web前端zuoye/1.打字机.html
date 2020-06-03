@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 600px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid gray;
+            font-size: 16px;
+            color: green;
+            /*首行缩进2个字符*/
+            text-indent: 2em;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="info"></div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    var data = [];
+    var timeout;
+    var i=0;
+    data = "武汉，简称“汉”，别称“江城”，是湖北省省会、中部六省唯一的副省级市和特大城市，中国中部地区的中心城市，长江经济带核心城市，全国重要的工业基地、科教基地和综合交通枢纽，中央军委联勤保障部队驻地。"
+     timeout= setInterval(Myfun1, 500)
+
+    function Myfun1() {
+        var str=data.charAt(i);
+        $("#info").html($("#info").html()+str);
+        i++;
+    }
+    if (i==data.length){
+        clearInterval(timeout)
+    }
+
+
+
+</script>
+</html>

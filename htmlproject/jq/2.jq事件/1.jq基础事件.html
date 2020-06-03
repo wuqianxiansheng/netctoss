@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+用户名：<input type="text" id="uname" style="border:1px solid #000000"/>
+故乡：<select name="city">
+    <option value="1">北京</option>
+    <option value="2">上海</option>
+    <option value="3">广州</option>
+    <option value="4">武汉</option>
+</select>
+<script src="../../web前端zuoye/jquery.min.js"></script>
+<script>
+
+    /**
+     * 事件三要素：
+     *      事件源：通过jQuery选择器获取到的元素，$("CSS选择器")，例如：$("#box")
+     *      事件：对比DOM中的事件，就是去掉on(所有jQuery事件都不要带on)。例如：$("#box").click(function() { })
+     *      事件驱动程序：使用jQuery的语法，实现对元素的操作。$("#box").css("color", "red");
+     *
+     *       jQuery事件源.事件名(
+     *           function(){
+     *                 //事件驱动程序
+     *           }
+     *       );
+     *
+     */
+
+    /**
+     * jQuery对象和DOM对象如何区分？
+     *  通过jQuery选择器获取到的对象为jQuery对象---$('#box')
+     *  通过DOM的方式获取到的对象称为DOM对象-->document.getElementById('box')
+     */
+    $("[name=city]").change(function () {
+        console.log($(this).val())
+    })
+    $("#uname").focus(function () {
+        console.log("hahah")
+        this.style.border="2px solid #0000FF"
+    })
+    $("#uname").blur(function () {
+        console.log("xixixixi")
+        this.style.border="1px solid #000000"
+    })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        #des {
+            width: 200px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<div id="src">
+    <p>我是一个p标签</p>
+</div>
+<hr>
+<div id="des">
+
+</div>
+
+
+<button id="btn">复制节点</button>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $("#btn").click(function () {
+        //得到要复制的源节点的副本
+        var $copy = $("#src").clone();
+        //复制操作,添加到目标节点中
+        $("#des").append($copy);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="login.jsp" name="login">
+    <input type="text" id="uname" name="userName">
+    <input type="password" name="password">
+    <input type="submit" value="提交" name="submit">
+</form>
+<script>
+    var form=document.login;
+    var uname=document.getElementById("uname")
+    var passeord=form.password;
+    var submit=form.submit;
+    console.log(form);
+    console.log(uname)
+    console.log(passeord)
+    console.log(submit)
+
+</script>
+</body>
+</html>
